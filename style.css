@@ -1,0 +1,74 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #080930;
+}
+
+h1 {
+  text-align: center;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+.carousel-wrapper .carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 10px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.05s ease-in-out;
+  background-color: #c1c1c1;
+}
+.carousel-wrapper .carousel-item img {
+  height: 200px;
+}
+.carousel-wrapper .carousel-item .nav-wrappper {
+  position: absolute;
+  width: 100%;
+  top: 250px;
+  left: 0;
+}
+.carousel-wrapper .carousel-item .nav-wrappper .nav {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 20ppx;
+  display: inline-block;
+  background-color: #fff;
+  opacity: 0.5;
+}
+.carousel-wrapper .carousel-item .nav-wrappper .nav.active {
+  opacity: 1;
+}
+.carousel-wrapper [id^=target-item] {
+  display: none;
+}
+.carousel-wrapper .item-blue {
+  background-color: #4646A9;
+  color: white;
+}
+.carousel-wrapper .item-pink {
+  background-color: #FA2449;
+  color: white;
+}
+.carousel-wrapper .item-green {
+  background-color: #179781;
+  color: white;
+}
+.carousel-wrapper .item-1 {
+  z-index: 1;
+}
+.carousel-wrapper #target-item-1:target ~ .item-1 {
+  z-index: 3;
+}
+.carousel-wrapper #target-item-2:target ~ .item-2 {
+  z-index: 3;
+}
+.carousel-wrapper #target-item-3:target ~ .item-3 {
+  z-index: 3;
+}
